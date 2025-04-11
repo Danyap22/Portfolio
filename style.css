@@ -1,3 +1,22 @@
+/* Mobile-first styles */
+body {
+    font-size: 16px;
+  }
+  
+  /* Tablet and above */
+  @media (min-width: 768px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  /* Desktop and above */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 20px;
+    }
+  }
+
 * {
     margin: 0;
     padding: 0;
