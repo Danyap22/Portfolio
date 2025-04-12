@@ -1,267 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of John Daniel Yap, showcasing skills and projects in web development.">
-    <meta name="keywords" content="John Daniel Yap, portfolio, frontend developer, web development, projects">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of John Daniel Yap, showcasing skills and projects in web development." />
+  <meta name="keywords" content="John Daniel Yap, portfolio, frontend developer, web development, projects" />
+  <title>Portfolio Website</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 
 <body>
+  <header class="header">
+    <a href="#" class="logo">John Daniel Yap</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#frontend-projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    <header class="header">
-        <a href="#" class="logo">John Daniel Yap</a>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <i class="fa-solid fa-bars" id="menu-icon" aria-label="Menu"></i>
+    <a href="https://github.com/Danyap22" target="_blank" rel="noopener noreferrer">
+      <button class="visit-btn">Visit Github</button>
+    </a>
+    <button id="toggle-button" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-toggle-on"></i>
+    </button>
+  </header>
 
-        <i class="fa-solid fa-bars" id="menu-icon" aria-label="Menu"></i>
-        <a href="https://github.com/Danyap22" target="_blank" rel="noopener noreferrer">
-            <button class="visit-btn">Visit Github</button>
-        </a>
-        <button id="toggle-button" aria-label="Toggle dark mode">
-            <i class="fa-solid fa-toggle-on"></i>
-        </button>
-    </header>
+  <main>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <img src="image.jpg" alt="Profile Picture" aria-hidden="true" />
+        <div class="info-box">
+          <div class="text">
+            <h3>Hi, I'm</h3>
+            <h3>Daniel Yap</h3>
+            <span>Frontend Developer</span>
+          </div>
 
-    <main>
-        <section id="about" class="about">
-            <div class="about-container">
-                <img src="image.jpg" alt="Profile Picture" aria-hidden="true">
-                <div class="info-box">
-                    <div class="text">
-                        <h3>Hi, I'm</h3>
-                        <h3>Daniel Yap</h3>
-                        <span>Frontend Developer</span>
-                    </div>
+          <div class="btn-group">
+            <a href="https://www.linkedin.com/..." target="_blank" class="btn" rel="noopener noreferrer">Download CV</a>
+            <a href="#contact" class="btn">Contact</a>
+          </div>
 
-                    <div class="btn-group">
-                        <a href="https://www.linkedin.com/in/john-daniel-yap-09202a1b4/details/featured/1743690790514/single-media-viewer/?profileId=ACoAADHWZe4BSCXH4nO5ZkhPxlb-lSl4swKoGwA" target="_blank" class="btn" rel="noopener noreferrer">Download CV</a>
-                        <a href="#contact" class="btn">Contact</a>
-                    </div>
+          <div class="socials">
+            <a href="https://github.com/Danyap22" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-                    <div class="socials">
-                        <a href="https://github.com/Danyap22" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- EXPERIENCES SECTION -->
-        <section id="experience" class="experience">
-            <h2 class="section-title">Experience</h2>
-            <div class="grid">
-                <article class="grid-card">
-                    <i class="fa-solid fa-video"></i>
-                    <span>Video Editor</span>
-                    <h3>10 years experience</h3>
-                    <p>From 2015 to 2019, I created tutorial videos, unboxings, and product reviews on YouTube using Kinemaster. Currently, I specialize in video editing for TikTok and social media, using CapCut for short-form content and Canva for motion graphics in product promotions. Skilled in delivering eye-catching, engaging videos tailored to online audiences.</p>
-                    </p>
-                </article>
+      <!-- Carousel -->
+      <div class="carousel-container">
+        <button class="carousel-btn left" onclick="prevMedia()">⟨</button>
+        <button class="carousel-btn right" onclick="nextMedia()">⟩</button>
+        <div class="carousel-media" id="carousel-media">
+          <!-- JS will insert img/video here -->
+        </div>
+      </div>
+    </section>
 
-                <article class="grid-card">
-                    <i class="fa-solid fa-pen-nib"></i>
-                    <span>Graphic Design</span>
-                    <h3>10 years experience</h3>
-                    <p>Started in 2015 by editing YouTube videos such as tutorials, unboxings, and reviews using Kinemaster. I also designed custom thumbnails for each video to attract viewers and boost engagement. By 2018, I launched my Shopee Seller account, where I handled all graphic design tasks—from creating product photos, logos, and banners, to designing infographics, promotional posters, and social media content. Currently, I use CapCut for TikTok video editing and Canva for motion graphics and promotional design materials.</p>
-                </article>
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="grid">
+        <!-- Repeatable Cards -->
+        <article class="grid-card">
+          <i class="fa-solid fa-video"></i>
+          <span>Video Editor</span>
+          <h3>10 years experience</h3>
+          <p>From 2015 to 2019, I created tutorial videos, unboxings, and product reviews on YouTube using Kinemaster. Currently, I specialize in video editing for TikTok and social media using CapCut and Canva.</p>
+        </article>
 
-                <article class="grid-card">
-                    <i class="fa-solid fa-laptop"></i>
-                    <span>Frontend Development</span>
-                    <h3>2 years experience</h3>
-                    <p>Developed personal and mini projects using HTML, CSS, JavaScript, and ReactJS. Focused on building responsive user interfaces, implementing clean design, and enhancing user experience. Skilled in creating reusable components, integrating APIs, and deploying functional web applications.</p>
-                </article>
+        <article class="grid-card">
+          <i class="fa-solid fa-pen-nib"></i>
+          <span>Graphic Design</span>
+          <h3>10 years experience</h3>
+          <p>I started in 2015 creating thumbnails and graphics for YouTube. Later on, I designed logos, infographics, and posters for my Shopee store using Canva and CapCut.</p>
+        </article>
 
-                <article class="grid-card">
-                    <i class="fa-solid fa-list"></i>
-                    <span>UI/UX Design</span>
-                    <h3>2 years experience</h3>
-                    <p>Designed and improved user interfaces for personal and eCommerce projects with a focus on responsiveness and usability. Created mockups, layouts, and design elements using Canva and Figma. Applied basic UX principles to improve the user journey, resulting in more intuitive and engaging designs for web and mobile platforms.</p>
-                </article>
-            </div>
-        </section>
-<!-- FRONT WEBDEV PERSONAL PROJECTS SECTION -->
-        <section id="projects" class="projects">
-            <h2 class="section-title">Frontend Web Development Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="Todolist.png" alt="Project 1" aria-hidden="true">
-                    <h3>TODO APP</h3>
-                    <p>Personal project practicing html, css and javascript</p>
-                    <div class="btn-group">
-                        <button class="btn">Live Demo</button>
-                        <button class="btn">Github Repo</button>
-                    </div>
-                </div>
+        <article class="grid-card">
+          <i class="fa-solid fa-laptop"></i>
+          <span>Frontend Development</span>
+          <h3>2 years experience</h3>
+          <p>Built web applications using HTML, CSS, JavaScript, and ReactJS. Focused on clean, responsive UIs and reusable components.</p>
+        </article>
 
-                <div class="project-card">
-                    <img src="LOGIN.png" alt="Project 2" aria-hidden="true">
-                    <h3>Responsive Login</h3>
-                    <p>An academic project promoting health, different types of smoothies, and practing python kivy</p>
-                    <div class="btn-group">
-                        <button class="btn">Live Demo</button>
-                        <button class="btn">Github Repo</button>
-                    </div>
-                </div>
+        <article class="grid-card">
+          <i class="fa-solid fa-list"></i>
+          <span>UI/UX Design</span>
+          <h3>2 years experience</h3>
+          <p>Designed mobile and web interfaces using Canva and Figma. Focused on user-centered design and better navigation experience.</p>
+        </article>
+      </div>
+    </section>
 
-                <div class="project-card">
-                    <img src="project-1.png" alt="Project 3" aria-hidden="true">
-                    <h3>SSK WORDPRESS WEBSITE</h3>
-                    <p>This project is still currently on works.</p>
-                    <div class="btn-group">
-                        <button class="btn">Live Demo</button>
-                        <button class="btn">Github Repo</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- GRAPHIC ARTIST PROJECTS SECTION -->
-        <section id="projects" class="projects">
-            <h2 class="section-title">Graphic Artist Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="Logo1.png" alt="Project 1" aria-hidden="true">
-                    <h3>Tripple J & Co Logo</h3>
-                    <p>This logo was made using Canva. I created it for our baking business that we’re planning to start.</p>
-                    <div class="btn-group">
-                        <button class="btn">Live Demo</button>
-                        <button class="btn">Github Repo</button>
-                    </div> 
-                </div>
+    <!-- FRONTEND PROJECTS -->
+    <section id="frontend-projects" class="projects">
+      <h2 class="section-title">Frontend Web Development Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="Todolist.png" alt="TODO App" />
+          <h3>TODO APP</h3>
+          <p>Personal project practicing HTML, CSS, and JavaScript.</p>
+          <div class="btn-group">
+            <button class="btn">Live Demo</button>
+            <button class="btn">Github Repo</button>
+          </div>
+        </div>
 
-                <div class="project-card">
-                    <img src="BananaLoaf.png" alt="Project 2" aria-hidden="true">
-                    <h3>Uniqueverse Logo</h3>
-                    <p>This is a personal project  made on Canva. I created this logo for my affiliate and Shopee account.</p>
-                    <div class="btn-group">
-                        <button class="btn">Live Demo</button>
-                        <button class="btn">Github Repo</button>
-                    </div>
-                </div>
+        <div class="project-card">
+          <img src="LOGIN.png" alt="Login Project" />
+          <h3>Responsive Login</h3>
+          <p>Academic project promoting smoothies while practicing Python Kivy.</p>
+          <div class="btn-group">
+            <button class="btn">Live Demo</button>
+            <button class="btn">Github Repo</button>
+          </div>
+        </div>
 
-                <div class="project-card">
-                    <img src="Rumagon Benefit (2).png" alt="Project 3" aria-hidden="true">
-                    <h3>Rumagon Infographic Poster</h3>
-                    <p>This Infographic poster was made during the Christmas season, i used canva to create this poster.</p>
-                    <div class="btn-group">
-                        <button class="btn">Live Demo</button>
-                        <button class="btn">Github Repo</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-<!-- UI/UX PROJECT SECTION -->
-        <section id="projects" class="projects">
-            <h2 class="section-title">UI/UX Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="cheesebox.png.png" alt="Project 1" aria-hidden="true">
-                    <h3>Cheesebox Prototype</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <div class="btn-group">
-                        <a href="https://www.figma.com/design/ztoAB0htAnhSx2F71gboOg/Untitled?node-id=97-14&node-type=frame&t=aJT7ktxnCzJ7jKhj-0" class="btn" target="_blank">Live Demo</a>
-                    </div>
-                </div>
+        <div class="project-card">
+          <img src="project-1.png" alt="WordPress Project" />
+          <h3>SSK WORDPRESS WEBSITE</h3>
+          <p>This project is still in development.</p>
+          <div class="btn-group">
+            <button class="btn">Live Demo</button>
+            <button class="btn">Github Repo</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="project-card">
-                    <img src="car.png" alt="Project 2" aria-hidden="true">
-                    <h3>Car Park Finder Prototype</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <div class="btn-group">
-                        <a href="https://www.figma.com/proto/ZetrAKnAJZdoiewN0MJMF9/Userdes-web-version?node-id=23-2&starting-point-node-id=23%3A2" class="btn" target="_blank">Live Demo</a> 
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <img src="Inmedia.png" alt="Project 3" aria-hidden="true">
-                    <h3>First Prototype Project</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <div class="btn-group">
-                        <a href="https://www.figma.com/proto/iAMqjjm48aOH38zbGAzsOK/INMEDIA?t=VOKVBSBNH6DWqegT-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=2-2&starting-point-node-id=2%3A2&show-proto-sidebar=1" class="btn" target="_blank">Live Demo</a> 
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- VIDEO EDITING PROJECT SECTION -->
-        <section id="projects" class="projects">
-            <h2 class="section-title">Video Editing Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <video width="300", controls>
-                        <source src="YNL.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <h3>YNL Product Promotion</h3>
-                    <p>I created this Product Promotion using Canva.</p>
-                    <div class="btn-group">
-                        <button class="btn">Fullscreen</button>
-                    </div>
-                </div>
+    <!-- GRAPHIC DESIGN PROJECTS -->
+    <section id="graphic-projects" class="projects">
+      <h2 class="section-title">Graphic Artist Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="Logo1.png" alt="Tripple J Logo" />
+          <h3>Tripple J & Co Logo</h3>
+          <p>Designed for our future baking business using Canva.</p>
+          <div class="btn-group">
+            <button class="btn">Live Demo</button>
+            <button class="btn">Github Repo</button>
+          </div>
+        </div>
 
-                <div class="project-card">
-                    <video width="300", height="350" controls>
-                        <source src="VIDEO2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <h3>Capcut Perfume Video Template</h3>
-                    <p>I used Capcut Templates to create this video promotion on Tiktok.</p>
-                    <div class="btn-group">
-                        <button class="btn">Fullscreen</button>
-                    </div>
-                </div>
+        <div class="project-card">
+          <img src="BananaLoaf.png" alt="Uniqueverse Logo" />
+          <h3>Uniqueverse Logo</h3>
+          <p>Personal branding for my affiliate and Shopee accounts.</p>
+          <div class="btn-group">
+            <button class="btn">Live Demo</button>
+            <button class="btn">Github Repo</button>
+          </div>
+        </div>
 
-                <div class="project-card">
-                    <video width="300", controls>
-                        <source src="VIDEO3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <h3>Spiderman Promotion Video</h3>
-                    <p>This project is for the promotion for the Spiderman Masks that i sell as an affiliate on Tiktok. I used canva to create this promotion.</p>
-                    <div class="btn-group">
-                        <button class="btn">Fullscreen</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- CONTACT ME SECTION -->
-        <section class="contact" id="contact">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="input-box">
-                <div class="input">
-                    <input type="Name" placeholder="John Doe" required>
-                    
-                    <input type="email" placeholder="example@gmail.com" required>
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <button class="btn">Submit</button>
-            </div>
-        </section>
-    </main>
-<!-- FOOTER -->
-    <footer>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <p class="copyright">© All Rights Reserved | Daniel Yap</p>
-    </footer>
+        <div class="project-card">
+          <img src="Rumagon Benefit (2).png" alt="Infographic Poster" />
+          <h3>Rumagon Infographic Poster</h3>
+          <p>Designed during the Christmas season using Canva.</p>
+          <div class="btn-group">
+            <button class="btn">Live Demo</button>
+            <button class="btn">Github Repo</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- UI/UX PROJECTS -->
+    <section id="uiux-projects" class="projects">
+      <h2 class="section-title">UI/UX Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="cheesebox.png.png" alt="Cheesebox Prototype" />
+          <h3>Cheesebox Prototype</h3>
+          <p>Prototype project created on Figma.</p>
+          <div class="btn-group">
+            <a href="https://www.figma.com/design/ztoAB0htAnhSx2F71gboOg/Untitled?node-id=97-14&node-type=frame&t=aJT7ktxnCzJ7jKhj-0" class="btn" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="car.png" alt="Car Park Finder" />
+          <h3>Car Park Finder Prototype</h3>
+          <p>Figma prototype for a car park app.</p>
+          <div class="btn-group">
+            <a href="https://www.figma.com/proto/ZetrAKnAJZdoiewN0MJMF9/Userdes-web-version?node-id=23-2&starting-point-node-id=23%3A2" class="btn" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="Inmedia.png" alt="Inmedia Prototype" />
+          <h3>First Prototype Project</h3>
+          <p>Initial UI/UX design project using Figma.</p>
+          <div class="btn-group">
+            <a href="https://www.figma.com/proto/iAMqjjm48aOH38zbGAzsOK/INMEDIA" class="btn" target="_blank">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
-
-</html>  
+</html>
