@@ -495,3 +495,29 @@ body.dark-mode #toggle-button {
     visibility: visible;
   }
   
+  .footer {
+    background-color: #222;
+    color: #f1f1f1;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer-links a {
+    color: #f1f1f1;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #1da1f2; /* Optional: Change hover color */
+  }
+  
