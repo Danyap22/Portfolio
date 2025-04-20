@@ -521,3 +521,17 @@ body.dark-mode #toggle-button {
     color: #1da1f2; /* Optional: Change hover color */
   }
   
+  .project-video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  body {
+    background-color: #fffaf0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  
